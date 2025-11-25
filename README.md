@@ -1,12 +1,11 @@
 # FARGO3D Setup: `DVSI_gas_2d_hg4x5_res100`
 
 This repository contains a **single FARGO3D setup** called `DVSI_gas_2d_hg4x5_res100`.  
-It is meant to be used together with the main FARGO3D code (Benítez-Llambay & Masset, 2016, FARGO3D: A New GPU-Oriented MHD Code, ApJS, 223, 11.).
+It is meant to be used together with the main [FARGO3D code](https://github.com/FARGO3D/fargo3d) (Benítez-Llambay & Masset, 2016, FARGO3D: A New GPU-Oriented MHD Code, ApJS, 223, 11.).
 
 The setup lives in:
 
-DVSI_gas_2d_hg4x5_res100/
-
+`DVSI_gas_2d_hg4x5_res100/`
 
 and provides input and custom source files needed to run this particular model.
 
@@ -79,17 +78,14 @@ Inside `DVSI_gas_2d_hg4x5_res100/` you will find:
 
 4. **Recompile FARGO3D**
 
-   Follow the standard FARGO3D build instructions (see [documentation](https://fargo3d.github.io/documentation/)).
+   Follow the standard FARGO3D build instructions (see [FARGO3D documentation](https://fargo3d.github.io/documentation/)).
 
 5. **Run FARGO3D with this setup**
 
-   Use the usual FARGO3D command for selecting a setup, using the setup name:
-
    ```text
-   DVSI_gas_2d_hg4x5_res100
+   make SETUP=DVSI_gas_2d_hg4x5_res100
+   ./fargo3d setups/VSI_gas_2d_hg4x5_res100/VSI_gas_2d_hg4x5_res100.par
    ```
-
-   The exact command depends on how you normally run FARGO3D (see the FARGO3D documentation for the precise syntax).
 
 ---
 
@@ -119,8 +115,7 @@ Inside `DVSI_gas_2d_hg4x5_res100/` you will find:
 ## Disclaimer
 
 * This repository only contains a **single setup** and a replacement `global.h`; it is **not** a complete hydrodynamics code.
-* Use at your own risk: replacing `src/global.h` can affect other setups in the same FARGO3D tree.
-  Consider keeping a separate FARGO3D clone or backing up the original file.
+* Consider keeping a separate FARGO3D clone or backing up the original file.
 
 ---
 
