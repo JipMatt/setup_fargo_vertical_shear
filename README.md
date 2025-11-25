@@ -1,4 +1,4 @@
-# FARGO3D Setup: `DVSI_gas_2d_hg4x5_res100`
+# FARGO3D Setup: `DVSI_gas_2D_hg4x5_res100`
 
 This repository contains a **single FARGO3D setup** called `DVSI_gas_2d_hg4x5_res100`.  
 It is meant to be used together with the main [FARGO3D code](https://github.com/FARGO3D/fargo3d) (Benítez-Llambay & Masset, 2016, FARGO3D: A New GPU-Oriented MHD Code, ApJS, 223, 11.).
@@ -21,13 +21,13 @@ Inside `DVSI_gas_2d_hg4x5_res100/` you will find:
 * `condinit.c`
   C file that defines the initial conditions for the simulation and reads values from `initial.csv`.
 
-* `DVSI_gas_2d_hg4x5_res100.bound.0`
+* `DVSI_gas_2D_hg4x5_res100.bound.0`
   Boundary configuration file used by FARGO3D for this setup.
 
-* `DVSI_gas_2d_hg4x5_res100.opt`
+* `DVSI_gas_2D_hg4x5_res100.opt`
   Options file (e.g. code compilation/runtime options for this setup).
 
-* `DVSI_gas_2d_hg4x5_res100.par`
+* `DVSI_gas_2D_hg4x5_res100.par`
   Main parameter file for the run (grid, physics, runtime parameters, etc.).
 
 * `global.h` ⚠️
@@ -46,7 +46,7 @@ Inside `DVSI_gas_2d_hg4x5_res100/` you will find:
 ## Requirements
 
 * A working copy of the **FARGO3D** codebase.
-* A C compiler and any dependencies required by FARGO3D (see the FARGO3D documentation).
+* A C compiler and any dependencies required by FARGO3D (see the [FARGO3D documentation](https://fargo3d.github.io/documentation/)).
 * Ability to compile FARGO3D from source.
 
 ---
@@ -65,7 +65,7 @@ Inside `DVSI_gas_2d_hg4x5_res100/` you will find:
    Assuming your FARGO3D source tree is in `~/fargo3d` and has a `setups/` directory:
 
    ```bash
-   cp -r DVSI_gas_2d_hg4x5_res100 ~/fargo3d/setups/
+   cp -r DVSI_gas_2D_hg4x5_res100 ~/fargo3d/setups/
    ```
 
 3. **Replace FARGO3D’s `global.h`**
@@ -73,7 +73,7 @@ Inside `DVSI_gas_2d_hg4x5_res100/` you will find:
    ```bash
    cd ~/fargo3d
    cp src/global.h src/global.h.backup   # optional but recommended
-   cp setups/DVSI_gas_2d_hg4x5_res100/global.h src/global.h
+   cp setups/DVSI_gas_2D_hg4x5_res100/global.h src/global.h
    ```
 
 4. **Recompile FARGO3D**
@@ -83,8 +83,8 @@ Inside `DVSI_gas_2d_hg4x5_res100/` you will find:
 5. **Run FARGO3D with this setup**
 
    ```text
-   make SETUP=DVSI_gas_2d_hg4x5_res100
-   ./fargo3d setups/VSI_gas_2d_hg4x5_res100/VSI_gas_2d_hg4x5_res100.par
+   make SETUP=DVSI_gas_2D_hg4x5_res100
+   ./fargo3d setups/VSI_gas_2D_hg4x5_res100/VSI_gas_2D_hg4x5_res100.par
    ```
 
 ---
@@ -99,9 +99,9 @@ Inside `DVSI_gas_2d_hg4x5_res100/` you will find:
 * To **adjust boundary conditions or parameters**, edit:
 
   * `boundaries.txt`
-  * `DVSI_gas_2d_hg4x5_res100.bound.0`
-  * `DVSI_gas_2d_hg4x5_res100.par`
-  * `DVSI_gas_2d_hg4x5_res100.opt`
+  * `DVSI_gas_2D_hg4x5_res100.bound.0`
+  * `DVSI_gas_2D_hg4x5_res100.par`
+  * `DVSI_gas_2D_hg4x5_res100.opt`
 
 * To **modify the custom numerical routines**, edit:
 
@@ -119,6 +119,15 @@ Inside `DVSI_gas_2d_hg4x5_res100/` you will find:
 
 ---
 
+## Contact
+
+Author: Jip Matthijsse
+
+Email: j.p.matthijsse@tudelft.nl
+
+Github: JipMatt
+
+---
 
 ```
 
