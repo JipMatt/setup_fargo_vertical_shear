@@ -1,0 +1,28 @@
+# PSI FARGO2D setup using 1 dust fluids
+
+Setup          DVSI_gas_2D_gauss_hg4x5_res100
+
+### Disk parameters
+
+AspectRatio        0.0000000000      Make eta source term 2
+OmegaFrame         1.0      Rotation rate
+ShearParam         1.5      Shear rate
+
+### Mesh parameters
+
+Ny         100      Number of 'radial' zones
+Nz         800      Number of vertical zones
+Ymin              -0.5
+Ymax              0.5
+Zmin              -4.0
+Zmax              4.0
+PeriodicY          YES
+
+### Output control parameters
+
+CFL        0.44     Courant number
+DT         0.1     Time step length
+Ninterm    10     Time steps between outputs
+Ntot       500     Total number of time steps
+OutputDir      @outputs/DVSI_gas_2D_gauss_hg4x5_res100
+
